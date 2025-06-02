@@ -1,0 +1,407 @@
+/* Estilos adicionais para a página Quem Somos */
+.page-header {
+    padding: 150px 0 80px;
+    background-color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), transparent);
+    z-index: 0;
+}
+
+.page-header h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-us-section {
+    background-color: var(--bg-color);
+    padding: 80px 0;
+}
+
+.about-image-large {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-logo {
+    position: relative;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.about-logo img {
+    max-width: 250px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.mvv-section {
+    background-color: var(--bg-color);
+    padding: 80px 0;
+}
+
+.mvv-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.mvv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.mvv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+.mvv-card:hover::before {
+    transform: scaleY(1);
+}
+
+.mvv-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--service-icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.mvv-card:hover .mvv-icon {
+    background-color: var(--primary-color);
+}
+
+.mvv-icon i {
+    font-size: 28px;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.mvv-card:hover .mvv-icon i {
+    color: #fff;
+}
+
+.mvv-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.values-list li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.team-section {
+    background-color: var(--bg-color);
+    padding: 80px 0;
+}
+
+.team-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+.team-image {
+    height: 250px;
+    background-color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(212, 175, 55, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .team-overlay {
+    opacity: 1;
+}
+
+.team-social {
+    display: flex;
+    gap: 15px;
+}
+
+.team-social a {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.team-card:hover .team-social a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.team-card:hover .team-social a:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.team-card:hover .team-social a:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.team-card:hover .team-social a:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.team-social a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.team-position {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-desc {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Estilos adicionais para a página Contato */
+.contact-section {
+    background-color: var(--bg-color);
+    padding: 80px 0;
+}
+
+.contact-form-wrapper {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    height: 100%;
+}
+
+.contact-form-wrapper h2 {
+    margin-bottom: 20px;
+}
+
+.form-control, .form-select {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--bg-color);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+.form-floating > label {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.contact-info-wrapper {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    height: 100%;
+}
+
+.contact-info-wrapper h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.contact-info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--service-icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.contact-info-icon i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.contact-info-content h5 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.contact-info-content p {
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+.contact-social-links h5 {
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--service-icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.map-section {
+    padding-bottom: 80px;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* Responsividade para as páginas adicionais */
+@media (max-width: 991px) {
+    .contact-info-wrapper {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-header {
+        padding: 120px 0 60px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-form-wrapper,
+    .contact-info-wrapper {
+        padding: 25px;
+    }
+}
+
+/* Animações adicionais */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
